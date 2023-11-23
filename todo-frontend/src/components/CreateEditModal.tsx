@@ -1,4 +1,3 @@
-// components/CreateEditModal.tsx
 import React, { useState, useEffect, ChangeEvent } from 'react';
 import { Modal, Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
@@ -90,21 +89,6 @@ const CreateEditModal: React.FC<CreateEditModalProps> = ({
               onChange={handleChange}
             />
           </Form.Group>
-
-          {/* Uncomment the following block if you want to include the Status dropdown */}
-          {/* <Form.Group controlId="status">
-            <Form.Label>Status:</Form.Label>
-            <Form.Control
-              as="select"
-              name="isCompleted"
-              value={formData.isCompleted ? 'true' : 'false'}
-              onChange={handleChange}
-            >
-              <option value="true">Completed</option>
-              <option value="false">To Do</option>
-            </Form.Control>
-          </Form.Group> */}
-
           <Button type="submit">Save</Button>
         </Form>
       </Modal.Body>

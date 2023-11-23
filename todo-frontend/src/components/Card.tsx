@@ -1,4 +1,3 @@
-// components/Card.tsx
 import React, { ChangeEvent } from "react";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import { updateTodo, deleteTodo } from "../services/api";
@@ -22,14 +21,12 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ todo, handleEdit }) => {
   const handleDelete = async () => {
     await deleteTodo(todo.id);
-    // You may want to update the UI in a more reactive way instead of reloading the page
     window.location.reload();
   };
 
   const handleStatusChange = async (e: ChangeEvent<HTMLInputElement>) => {
     const updatedTodo = { ...todo, isCompleted: e.target.checked };
     await updateTodo(todo.id, updatedTodo);
-    // You may want to update the UI in a more reactive way instead of reloading the page
     window.location.reload();
   };
 

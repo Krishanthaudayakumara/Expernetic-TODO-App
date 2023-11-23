@@ -1,4 +1,3 @@
-// components/Board.tsx
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import CreateEditModal from './CreateEditModal';
@@ -18,7 +17,7 @@ const Board: React.FC = () => {
 
   useEffect(() => {
     fetchTodos();
-  }, []); // Removed the fetchTodos dependency from the dependency array
+  }, []); 
 
   const handleCreate = () => {
     setModalType('create');
@@ -38,23 +37,29 @@ const Board: React.FC = () => {
   };
 
   const handleTaskUpdated = () => {
-    fetchTodos(); // Now it should work
+    fetchTodos(); 
   };
+
+  const incompleteTasks = todos.filter((todo: any) => !todo.isCompleted);
+  const completedTasks = todos.filter((todo: any) => todo.isCompleted);
 
   return (
     <div>
-      <h1 style={
-        {
-          textAlign: 'center',
-          margin: '20px 0 20px 0'
-        }
-      }>ToDo List</h1>
+      <h1 style={{
+        textAlign: 'center',
+        margin: '20px 0 20px 0'
+      }}>ToDo List</h1>
       <button className="create-button" onClick={handleCreate}>
         <FaPlus /> Create To-Do
       </button>
 
       <div className="tasks">
-        {todos.map((todo: any) => (
+        {/* Display incomplete tasks first */}
+        {incompleteTasks.map((todo: any) => (
+          <Card key={todo.id} todo={todo} handleEdit={() => handleEdit(todo)} />
+        ))}
+        {/* Display completed tasks at the end */}
+        {completedTasks.map((todo: any) => (
           <Card key={todo.id} todo={todo} handleEdit={() => handleEdit(todo)} />
         ))}
       </div>
