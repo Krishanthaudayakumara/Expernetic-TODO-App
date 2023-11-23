@@ -1723,11 +1723,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\udaya\\Documents\\Github\\Expernetic-TODO-App\\TodoApi\\TodoApi.csproj",
+      "projectUniqueName": "C:\\Users\\udaya\\Documents\\Github\\TODO New\\Expernetic-TODO-App\\TodoApi\\TodoApi.csproj",
       "projectName": "TodoApi",
-      "projectPath": "C:\\Users\\udaya\\Documents\\Github\\Expernetic-TODO-App\\TodoApi\\TodoApi.csproj",
+      "projectPath": "C:\\Users\\udaya\\Documents\\Github\\TODO New\\Expernetic-TODO-App\\TodoApi\\TodoApi.csproj",
       "packagesPath": "C:\\Users\\udaya\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\udaya\\Documents\\Github\\Expernetic-TODO-App\\TodoApi\\obj\\",
+      "outputPath": "C:\\Users\\udaya\\Documents\\Github\\TODO New\\Expernetic-TODO-App\\TodoApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\udaya\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1738,7 +1738,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1787,6 +1786,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1795,7 +1812,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
